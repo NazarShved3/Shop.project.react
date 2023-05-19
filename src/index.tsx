@@ -23,10 +23,10 @@ const Content = () => {
 
 const App = () => {
     return(
-        <div>
+        <>
             <Title/>
             <Content/> 
-        </div>
+        </>
     )
 }
 
