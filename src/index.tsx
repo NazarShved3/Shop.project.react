@@ -1,20 +1,22 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 
-//React Element
-// const title = React.createElement('h1',  {id: 'title'}, 'Hello React')
-
-
-//JSX 
-
-const app = (
-<div>
-    <h1 id="text">Hello App</h1>
+const App = () => {
+    return <div>
+        <h1>Hello App Component</h1>
     <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia ea totam sapiente sed, reprehenderit laboriosam! Ipsa corrupti quia deleniti consequatur amet, accusamus dolore, rerum delectus itaque, repellendus at quam commodi.
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. At, magni error, voluptatum consectetur ducimus perspiciatis sequi esse sunt nisi numquam, ab dolores reiciendis possimus! Debitis quis veniam nam culpa sunt!
+        </p>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis nam ducimus provident, blanditiis ipsam vel, dolor ut necessitatibus repellat temporibus, natus in accusantium corporis eius harum praesentium dignissimos inventore dicta?
+
     </p>
-</div>
-)
+    </div>
+}
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
-root.render(<React.StrictMode>{app}</React.StrictMode>)
+root.render(
+<React.StrictMode>
+    <App/>
+</React.StrictMode>
+)
