@@ -2,7 +2,12 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './style.css'
 
-const Title = () => {
+interface TitleProps {
+    title: string
+}
+
+
+const Title = (props: TitleProps) => {
     return  <h1>Hello App Component</h1>
 }
 
@@ -25,7 +30,8 @@ const Content = () => {
 const App = () => {
     return(
         <>
-            <Title/>
+            <Title title="App" />
+            <Title title="React"/>
             <Content/> 
         </>
     )
