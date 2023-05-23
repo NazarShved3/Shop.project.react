@@ -7,8 +7,8 @@ type TitleProps = {
 }
 
 
-const Title = (props: TitleProps) => {
-    return  <h1>Hello App Component</h1>
+const Title = ({ title }: TitleProps) => {
+    return  <h1>Hello {title} Component</h1>
 }
 
 const Content = () => {
