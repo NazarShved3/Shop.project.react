@@ -1,8 +1,11 @@
+import { CssBaseline } from '@mui/material'
 import Header from 'Container/Header/Header'
+
 const App = () => {
     return (
     <>
-    < Header/>
+        <CssBaseline/>
+        < Header/>
     </>
     )
 }
