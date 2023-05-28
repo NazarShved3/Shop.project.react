@@ -7,6 +7,7 @@ import { green } from '@mui/material/colors'
 import Menu from '@mui/icons-material/Menu'
 
 import './Header.scss'
+import CartHeader from 'components/CartHeader/CartHeader'
 
 type Props = {}
 
@@ -33,6 +34,7 @@ const Header = (props: Props) => {
                     </IconButton>
                     <Logo />
                     <Menu />
+                    <CartHeader />
                 </Toolbar>
             </Container>
         </AppBar>
