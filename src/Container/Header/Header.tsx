@@ -11,10 +11,13 @@ import './Header.scss'
 type Props = {}
 
 const Header = (props: Props) => {
+    const appBar = true
     return (
-        <AppBar position="static" className="app-bar" 
-        sx={{
-          backgroundColor: green,
+        <AppBar 
+        position="static" 
+        className="app-bar" 
+        style={{
+          backgroundColor: appBar ? 'green' : 'purple',
         }}
         >
             <Container>
