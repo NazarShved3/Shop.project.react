@@ -5,12 +5,18 @@ import MenuIcon from '@mui/icons-material/Menu'
 import './Header.scss'
 import { Container } from '@mui/material'
 import Logo from 'components/Logo/Logo'
+import { green } from '@mui/material/colors'
+import Menu from '@mui/icons-material/Menu'
 
 type Props = {}
 
 const Header = (props: Props) => {
     return (
-        <AppBar position="static">
+        <AppBar position="static" className="app-bar" 
+        sx={{
+          backgroundColor: green,
+        }}
+        >
             <Container>
                 <Toolbar>
                     <IconButton
@@ -23,7 +29,7 @@ const Header = (props: Props) => {
                         <MenuIcon />
                     </IconButton>
                     <Logo />
-                    
+                    <Menu/>
                 </Toolbar>
             </Container>
         </AppBar>
