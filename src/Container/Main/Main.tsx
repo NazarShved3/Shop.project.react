@@ -1,5 +1,6 @@
-import { Home } from "@mui/icons-material"
+// import { Home } from "@mui/icons-material"
 import { Container } from "@mui/material"
+import Home from 'pages/Home/Home'
 
 type Props = {}
 
