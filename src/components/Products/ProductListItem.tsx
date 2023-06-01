@@ -1,17 +1,25 @@
 import { Button, Card, CardActions, CardContent } from '@mui/material'
 import './ProductListItem.scss'
 
-type Props = {}
+type Props = {
+    title: string
+    description: string
+    capacity: string
+    type: string
+    price: number
+}
 
 const ProductListItem = (props: Props) => {
     return (
         <Card className="product" variant="outlined">
             <CardContent>
-                <h4 className="product-title">iPhone X</h4>
-                <p className="product-description">This is iPhone X</p>
-                <div className="product-features">Type: phone</div>
-                <div className="product-features">Capacity: 64Gb</div>
-                <div className="product-price">$ 500</div>
+                <h4 className="product-title">{props.title}</h4>
+                <div className="product-description">{props.description}</div>
+                <div className="product-features">Type: {props.type}</div>
+                <div className="product-features">
+                    Capacity: {props.capacity}Gb
+                </div>
+                <div className="product-price">Price: $ {props.price}</div>
                 <CardActions className="btn-wrap">
                     <Button variant="outlined">Add to cart</Button>
                 </CardActions>
@@ -21,3 +29,8 @@ const ProductListItem = (props: Props) => {
 }
 
 export default ProductListItem
+
+
+// https://github.com/kznkv-skillup/28-02/tree/lesson-5
+
+// https://legacy.reactjs.org/docs/state-and-lifecycle.html

@@ -1,18 +1,17 @@
-// import { Home } from "@mui/icons-material"
-import { Container } from "@mui/material"
+import { Container } from '@mui/material'
 import Home from 'pages/Home/Home'
 
 type Props = {}
 
 const Main = (props: Props) => {
-  return (
-  <Container
-    sx={{
-        padding: '40px 0',
-    }}
-  >
-        <Home/>
-    </Container>
-  )
+    return (
+        <Container
+            sx={{
+                padding: '40px 0',
+            }}
+        >
+            <Home />
+        </Container>
+    )
 }
 export default Main
