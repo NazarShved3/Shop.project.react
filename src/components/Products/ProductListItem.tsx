@@ -3,7 +3,7 @@ import {
     Card, 
     CardActions, 
     CardContent, 
-    TextField 
+    TextField,
 } from '@mui/material'
 import './ProductListItem.scss'
 
