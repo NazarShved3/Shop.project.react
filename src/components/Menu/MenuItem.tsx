@@ -16,7 +16,7 @@ const MenuItem = ({ to, children }: Props) => {
                 }
             >
                 {children}
-            </NavLink>
+            </NavLink>S
         </Button>
     )
 }
