@@ -1,23 +1,27 @@
-import { 
-    Button, 
-    Card, 
-    CardActions, 
-    CardContent, 
+import {
+    Button,
+    Card,
+    CardActions,
+    CardContent,
     TextField,
 } from '@mui/material'
 import './ProductListItem.scss'
 import { useState } from 'react'
+import Quantity from 'components/Quantity/Quantity'
 
 type Props = {
+    id: number
     title: string
     description: string
     capacity: string
     type: string
     price: number
     image: string
+    addProductToCart: (id: number, count: number) => void
 }
 
 const ProductListItem = ({
+    id,
     title,
     description,
     type,
@@ -26,7 +30,6 @@ const ProductListItem = ({
     image,
     addProductToCart,
 }: Props) => {
-
     const [count, setCount] = useState<number>(1)
 
     const onIncrementClick = () => {
@@ -35,7 +38,6 @@ const ProductListItem = ({
     const onDecrementClick = () => {
         setCount((prevState) => prevState - 1)
     }
-
 
     return (
         <Card className="product" variant="outlined">
@@ -48,28 +50,18 @@ const ProductListItem = ({
                 <div className="product-features">Type: {type}</div>
                 <div className="product-features">Capacity: {capacity}Gb</div>
                 <div className="product-price">Price: $ {price}</div>
-               <div className="product-quantity">
-                <Button 
-                variant="outlined"
-                onClick={() => onDecrementClick()}
-                disabled={count <= 1}
-                >
-                    -
-                </Button>
-                <TextField value={count} size="small"></TextField>
-                <Button 
-                variant="outlined" 
-                onClick={() => onIncrementClick()}
-                disabled={count >= 1}
-                >
-                    +
-                </Button>
-               </div>
+                <Quantity
+                    count={count}
+                    onDecrementClick={onDecrementClick}
+                    onIncrementClick={onIncrementClick}
+                />
                 <CardActions className="btn-wrap">
-                    <Button variant="outlined"
-                    onClick={() => addProductToCart(count,price)}
+                    <Button
+                        variant="outlined"
+                        onClick={() => addProductToCart(id, count)}
                     >
-                        Add to cart</Button>
+                        Add to cart
+                    </Button>
                 </CardActions>
             </CardContent>
         </Card>
@@ -77,8 +69,3 @@ const ProductListItem = ({
 }
 
 export default ProductListItem
-
-
-// https://github.com/kznkv-skillup/28-02/tree/lesson-5
-
-// https://legacy.reactjs.org/docs/state-and-lifecycle.html
